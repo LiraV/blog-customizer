@@ -6,6 +6,7 @@ import { Select } from 'src/ui/select';
 import {
 	backgroundColors,
 	contentWidthArr,
+	defaultArticleState,
 	fontColors,
 	fontFamilyOptions,
 	fontSizeOptions,
@@ -54,8 +55,8 @@ export const ArticleParamsForm = ({ initial, onApply }: Props) => {
 
 	const handleReset = (e: React.FormEvent) => {
 		e.preventDefault();
-		setDraft(initial);
-		onApply(initial);
+		setDraft(defaultArticleState);
+		onApply(defaultArticleState);
 	};
 
 	return (
